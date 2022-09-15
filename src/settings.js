@@ -62,8 +62,8 @@ export const questions = [
   "Which timezone are you in?",
   "Preferred mode of transport?",
   "Find a gif that best represents your mood right now",
-  "What advice do you have for our new apprentices?",
   "Early bird or night owl?",
   "What is your karaoke song?",
   "What do you like to do outside of work?",
+  "What advice do you have for our new apprentices?",
 ];

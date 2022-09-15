@@ -5,17 +5,26 @@ import { questions } from "../../settings";
 
 const Question = () => {
   const [questionNumber, setQuestionNumber] = useState(0);
+  const [specialQuestion, setSpecialQuestion] = useState(false);
+
+  const handleClick = () => {
+    if (questionNumber + 1 === questions.length - 1) {
+      setSpecialQuestion(true);
+    }
+    setQuestionNumber(questionNumber + 1);
+  };
 
   return (
     <div className={styles.root}>
       <h1>{questions[questionNumber]}</h1>
-      <Contestants />
-      <button
-        className={styles.nextButton}
-        onClick={() => setQuestionNumber(questionNumber + 1)}
-      >
-        <p>next question</p>
-      </button>
+      <Contestants specialQuestion={specialQuestion} />
+      {specialQuestion ? (
+        ""
+      ) : (
+        <button className={styles.nextButton} onClick={handleClick}>
+          <p>next question</p>
+        </button>
+      )}
     </div>
   );
 };

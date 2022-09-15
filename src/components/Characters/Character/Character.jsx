@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./Character.module.scss";
 
 const Character = (props) => {
-  console.log(props);
   return (
     <div className={styles.root}>
       <h3
