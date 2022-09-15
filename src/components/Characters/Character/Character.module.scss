@@ -1,0 +1,39 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.smallIconText {
+  font-size: 1rem;
+  margin: 5px;
+}
+
+.largeIconText {
+  font-size: 2rem;
+  margin: 5px;
+}
+
+.smallIconWrapper {
+  background-color: #fff;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  img {
+    height: 50px;
+    position: relative;
+    top: 15px;
+  }
+}
+
+.largeIconWrapper {
+  background-color: #fff;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  img {
+    height: 150px;
+    position: relative;
+    top: 20px;
+  }
+}
