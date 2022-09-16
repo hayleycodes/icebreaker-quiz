@@ -12,14 +12,16 @@ const Character = (props) => {
         {props.name}
       </h3>
       <div
-        className={
+        className={`${
           props.smallIcon ? styles.smallIconWrapper : styles.largeIconWrapper
-        }
+        } ${props.smallIcon ? "" : styles.largeIconAnimate}`}
       >
-        <img
-          src={require(`../../../static/characters/${props.avatar}.png`)}
-          alt="Icon representing a worm."
-        />
+        <span className={styles.tooltip} data-text={props.avatar}>
+          <img
+            src={require(`../../../static/characters/${props.avatar}.png`)}
+            alt="Icon representing a worm."
+          />
+        </span>
       </div>
     </div>
   );

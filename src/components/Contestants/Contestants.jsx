@@ -8,10 +8,14 @@ const Contestants = (props) => {
   let contestantComponents = [];
 
   if (props.specialQuestion) {
-    people.forEach((person) => {
+    people.forEach((person, index) => {
       if (person !== "Mimmi" && person !== "Ai") {
         contestantComponents.push(
-          <Character name={person} avatar={allocatedAvatars[person]} />
+          <Character
+            name={person}
+            avatar={allocatedAvatars[person]}
+            key={index}
+          />
         );
       }
     });
@@ -24,7 +28,7 @@ const Contestants = (props) => {
         1
       );
       contestantComponents.push(
-        <Character name={person} avatar={allocatedAvatars[person]} />
+        <Character name={person} avatar={allocatedAvatars[person]} key={i} />
       );
     }
   }

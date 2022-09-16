@@ -37,3 +37,43 @@
     top: 20px;
   }
 }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.largeIconAnimate {
+  animation: spin 1s;
+}
+
+.tooltip {
+  position: relative; /* making the .tooltip span a container for the tooltip text */
+}
+
+.tooltip:before {
+  content: attr(data-text); /* here's the magic */
+  position: absolute;
+
+  /* vertically center */
+  top: 50%;
+  // left: 25%;
+
+  /* basic styles */
+  padding: 5px;
+  border-radius: 5px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  display: none; /* hide by default */
+  z-index: 1;
+}
+
+.tooltip:hover:before {
+  display: block;
+}
